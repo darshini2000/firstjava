@@ -1,0 +1,86 @@
+import random
+
+#palindrome program
+s="abcba"
+l=0
+for i in s:
+    l=l+1
+print(l)
+def palindrome(s):
+    p = ""
+    for i in s:
+        p=i+p
+    if (p==s):
+        print("it is a Pallindrome")
+    else:
+        print("it is not a palindrome")
+palindrome("ffsff")
+
+#remove duplicates in a letter
+def duplicate(t):
+    l = []
+    for i in t:
+        if i not in l:
+            l.append(i)
+            ds = ''.join(l)
+    print(ds)
+duplicate("TorryHarris")
+
+#swapping 2 numbers
+def swap(a,b):
+     a = a+b
+     b = a-b
+     a = a-b
+     return a,b
+print(swap(10,20))
+
+
+#WAP to guess the correct number game using a while loop.
+while True:
+    n = random.randint(1, 7)
+    nu = int(input("roll a die-> press 0 to quit "))
+    if n == nu:
+        print("win")
+    elif nu == 0:
+        break
+    else:
+        print("Try again")
+
+#WAP to count the number of vowels in a string
+def cvc(vc):
+    vc.lower()
+    v,c=0,0
+    for i in vc:
+        if i in ['a','e','i','o','u']:
+            v = v+1
+            print(v,"vowels")
+        else:
+            c += 1
+            print(c,"consonants")
+cvc("Python")
+
+#WAP to generate a random password
+def pw(le):
+    n = "0123456789"
+    l = "abcdefghjklmnopqrstuvwxyz"
+    u = l.upper()
+    p = "!@#$%^&*()_+=-"
+    pa = u+l+n+p
+    pas = ''.join(random.choice(pa) for i in range(le))
+    return pas
+print(pw(12))
+
+#WAP to check if a number is prime or not
+number = -65
+f = 0
+if (number>0):
+    for i in range(2,(number//2)+1):
+        if(number%i==0):
+            f=1
+            break
+    if (f):
+        print("Not Prime!!!!")
+    else:
+        print("---Prime---")
+else:
+    print("Not possible")
