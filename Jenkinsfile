@@ -10,15 +10,5 @@ pipeline {
                 }
             }
         }
- 
-        stage('Build and Execute Java File') {
-            steps {
-                // Compile and run the Java file
-                script {
-                    sh 'javac abc.java'
-                    sh 'java abc'
-                }
-            }
         }
     }
-}
