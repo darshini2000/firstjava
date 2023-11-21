@@ -7,5 +7,10 @@ pipeline {
                     echo 'hi dude'
                 }
             }
+        stage('Compile') {
+            steps {
+                    sh 'javac abc.java'
+                }
+            }
         }
         }
